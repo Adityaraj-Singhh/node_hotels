@@ -287,3 +287,10 @@ app.listen(3000,()=>{
 // 4. Client error responses (400- 499)
 // 5. Server error responses (500 - 599)4
 
+//Saving files in git
+//git init --> git status --> git add . (add all the files to git), for any specific file  use : git add filename
+//gitignore  file : to ignore certain files or directories from being saved in Git repository
+
+//command to remove node_modules from version control, if already added -->  git rm -r --cached node_modules
+//for saving the snapshot we use --> git commit -m  "message"
+
