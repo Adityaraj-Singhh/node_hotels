@@ -299,6 +299,6 @@ app.listen(PORT,()=>{
 //gitignore  file : to ignore certain files or directories from being saved in Git repository
 
 //command to remove node_modules from version control, if already added -->  git rm -r --cached node_modules
-//for saving the snapshot we use --> git commit -m  "message"
+//for saving the snapshot we use --> git commit -m  "message" //-->Version saved to github
 //Then git push
 
