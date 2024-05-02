@@ -199,12 +199,13 @@ const express = require('express')
 const app = express(); //now app has all the functionalities, from which a server can be made
 const db = require( './db'); //importing database module
 const MenuItem = require('./models/MenuItem');//(Create data and Save this in database homework)
-
+require('dotenv').config(); //->It is used for security purpose of our data
 
 
 const bodyParser = require('body-parser');//to parse the request body
 app.use(bodyParser.json()); //parses json  data present in the request body and convert it int object and stores it into request body
 
+const PORT = process.env.PORT || 3000;
 
 const Person = require('./models/person');
 
@@ -273,8 +274,14 @@ app.use('/person', personRoutes);
 app.use('/menu',MenuItemRoutes);
 
 
+
+
+
+
+
+
 // app.listen(3000)
-app.listen(3000,()=>{
+app.listen(PORT,()=>{
     console.log('listening at port number 3000');
 })
 
@@ -293,4 +300,5 @@ app.listen(3000,()=>{
 
 //command to remove node_modules from version control, if already added -->  git rm -r --cached node_modules
 //for saving the snapshot we use --> git commit -m  "message"
+//Then git push
 
